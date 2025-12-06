@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4df02a670ea10ad46b51226c8dbd4139, type: 3}
+  m_Name: Test Level_Data
+  m_EditorClassIdentifier: Assembly-CSharp::Data.LevelData
+  levelId: Test Level
+  backgroundSprite: {fileID: 262805530635442696, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
+  items:
+  - name: "\u0441\u043A\u0430\u043A\u0430\u043B\u043A\u0430"
+    itemSprite: {fileID: -8567570390922402372, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
+    uiIcon: {fileID: -5824378196328474995, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
+    position: {x: -2.2700005, y: 2.5249999, z: 0}
+    prefab: {fileID: 9145996264204231118, guid: de15a8c97e9d9a34a95a1991f661bf10, type: 3}
+  - name: "\u0432\u0438\u0434\u0435\u043E\u043A\u0430\u043C\u0435\u0440\u0430"
+    itemSprite: {fileID: -3537715261968880409, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
+    uiIcon: {fileID: -6497003432710275086, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
+    position: {x: 5.379999, y: 7.2949996, z: 0}
+    prefab: {fileID: 4321295790821880318, guid: 14b43265409413c4a9104fb151c96cf6, type: 3}
+  - name: "\u043F\u043E\u0434\u0441\u0432\u0435\u0447\u043D\u0438\u043A"
+    itemSprite: {fileID: 8856365292736548671, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
+    uiIcon: {fileID: -7976383753969072570, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
+    position: {x: -2.9900007, y: 7.19, z: 0}
+    prefab: {fileID: 685833221339183448, guid: a4aca8e7b66a18f41923e4e3ef8077d7, type: 3}
+  - name: "\u0440\u043E\u043B\u0438\u043A\u0438"
+    itemSprite: {fileID: 3424235071540583376, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
+    uiIcon: {fileID: 8461604941148780595, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
+    position: {x: 4.574999, y: 4.49, z: 0}
+    prefab: {fileID: 6327807722151788835, guid: 0d36eaea9971d1f48a98ad94f8cd7dfd, type: 3}
+  - name: "\u043C\u0430\u0440\u043C\u0435\u043B\u0430\u0434"
+    itemSprite: {fileID: 1450734124388575869, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
+    uiIcon: {fileID: -1852639459504719233, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
+    position: {x: 5.129999, y: 3.2849998, z: 0}
+    prefab: {fileID: 4292411718449325300, guid: e41ed90db53fe5a4b80ec637f7253130, type: 3}
+  - name: "\u0431\u043B\u043E\u043A\u043D\u043E\u0442"
+    itemSprite: {fileID: 3114056651469583687, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
+    uiIcon: {fileID: -2560516662479995733, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
+    position: {x: -3.4800005, y: 3.645, z: 0}
+    prefab: {fileID: 5170528995092767743, guid: 09ec2aacde08a4543ac2a091c6c88648, type: 3}
+  itemsEnabled: 
+  useImagesInsteadOfText: 0
+  timerEnabled: 1
+  timerDuration: 120
+  itemOrder: 
