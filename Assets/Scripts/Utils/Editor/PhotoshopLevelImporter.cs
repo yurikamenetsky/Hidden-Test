@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -151,7 +152,7 @@ namespace Utils.Editor
             EditorUtility.DisplayDialog("Level import complete", $"Created {levelData.items.Count} items", "OK");
         }
 
-        private HiddenItemView CreateObjectPrefab(Sprite sprite, string path)
+        private GameObject CreateObjectPrefab(Sprite sprite, string path)
         {
             var go = new GameObject(sprite.name);
             go.AddComponent<SpriteRenderer>().sprite = sprite;
@@ -162,7 +163,8 @@ namespace Utils.Editor
             // Prefab creation
             var result = PrefabUtility.SaveAsPrefabAsset(go, $"{path}/{sprite.name}.prefab");
             DestroyImmediate(go);
-            return result.GetComponent<HiddenItemView>();
+            return result;
         }
     }
 }
+#endif

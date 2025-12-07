@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4df02a670ea10ad46b51226c8dbd4139, type: 3}
   m_Name: Test Level_Data
-  m_EditorClassIdentifier: Assembly-CSharp::Data.LevelData
+  m_EditorClassIdentifier: Data::Data.LevelData
   levelId: Test Level
   backgroundSprite: {fileID: 262805530635442696, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
   items:
@@ -19,37 +19,37 @@ MonoBehaviour:
     itemSprite: {fileID: -8567570390922402372, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
     uiIcon: {fileID: -5824378196328474995, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
     position: {x: -2.2699995, y: -2.8750002, z: 0}
-    prefab: {fileID: 1986613599473138290, guid: de15a8c97e9d9a34a95a1991f661bf10, type: 3}
+    prefab: {fileID: 3793006531254847541, guid: de15a8c97e9d9a34a95a1991f661bf10, type: 3}
     isEnable: 1
   - name: "\u0432\u0438\u0434\u0435\u043E\u043A\u0430\u043C\u0435\u0440\u0430"
     itemSprite: {fileID: -3537715261968880409, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
     uiIcon: {fileID: -6497003432710275086, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
     position: {x: 5.38, y: 1.8949995, z: 0}
-    prefab: {fileID: 6209831350339428876, guid: 14b43265409413c4a9104fb151c96cf6, type: 3}
+    prefab: {fileID: 4324243121915766558, guid: 14b43265409413c4a9104fb151c96cf6, type: 3}
     isEnable: 1
   - name: "\u043F\u043E\u0434\u0441\u0432\u0435\u0447\u043D\u0438\u043A"
     itemSprite: {fileID: 8856365292736548671, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
     uiIcon: {fileID: -7976383753969072570, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
     position: {x: -2.9899998, y: 1.79, z: 0}
-    prefab: {fileID: 6931777317265515552, guid: a4aca8e7b66a18f41923e4e3ef8077d7, type: 3}
+    prefab: {fileID: 8802645388658787280, guid: a4aca8e7b66a18f41923e4e3ef8077d7, type: 3}
     isEnable: 1
   - name: "\u0440\u043E\u043B\u0438\u043A\u0438"
     itemSprite: {fileID: 3424235071540583376, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
     uiIcon: {fileID: 8461604941148780595, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
     position: {x: 4.575, y: -0.9100003, z: 0}
-    prefab: {fileID: 308198548314107903, guid: 0d36eaea9971d1f48a98ad94f8cd7dfd, type: 3}
+    prefab: {fileID: 5192030430390911177, guid: 0d36eaea9971d1f48a98ad94f8cd7dfd, type: 3}
     isEnable: 1
   - name: "\u043C\u0430\u0440\u043C\u0435\u043B\u0430\u0434"
     itemSprite: {fileID: 1450734124388575869, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
     uiIcon: {fileID: -1852639459504719233, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
     position: {x: 5.13, y: -2.1150002, z: 0}
-    prefab: {fileID: 8054783612668008581, guid: e41ed90db53fe5a4b80ec637f7253130, type: 3}
+    prefab: {fileID: 301909905670879851, guid: e41ed90db53fe5a4b80ec637f7253130, type: 3}
     isEnable: 1
   - name: "\u0431\u043B\u043E\u043A\u043D\u043E\u0442"
     itemSprite: {fileID: 3114056651469583687, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
     uiIcon: {fileID: -2560516662479995733, guid: 1bab95dfd8d7905469823433d8a39a49, type: 3}
     position: {x: -3.4799995, y: -1.7550001, z: 0}
-    prefab: {fileID: 4608158536416290616, guid: 09ec2aacde08a4543ac2a091c6c88648, type: 3}
+    prefab: {fileID: 8351877659480225952, guid: 09ec2aacde08a4543ac2a091c6c88648, type: 3}
     isEnable: 1
   <MaxItemsCount>k__BackingField: 3
   <UseImagesInsteadOfText>k__BackingField: 1

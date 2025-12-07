@@ -221,4 +221,4 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6423a2df10924c4db982cdb2f83dd99, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Views.HiddenItemView
+  m_EditorClassIdentifier: Views::Views.HiddenItemView

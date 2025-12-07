@@ -1,13 +1,13 @@
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
-using Views;
 
 namespace Data.Editor
 {
     [CustomPropertyDrawer(typeof(ItemData))]
     public class ItemDataDrawer : PropertyDrawer
     {
-        private const float EnableWidth = 20f;
+        private const float EnableWidth = 15f;
         private const float SpriteWidth = 64f;
         private const float UiIconWidth = 64f;
         private const float NameWidth = 120f;
@@ -37,9 +37,12 @@ namespace Data.Editor
             // Calculate rects
             var x = position.x;
             var y = position.y;
-            
+
             var isEnableRect = new Rect(x, y, EnableWidth, LineHeight);
-            x += EnableWidth + 2;
+            x += EnableWidth;
+            
+            var isActiveRect = new Rect(x, y, SpriteWidth, LineHeight);
+            x += SpriteWidth + 2;
 
             var spriteRect = new Rect(x, y, SpriteWidth, SpriteWidth);
             x += SpriteWidth + 2;
@@ -54,10 +57,11 @@ namespace Data.Editor
 
             // Draw fields
             EditorGUI.PropertyField(isEnableRect, isEnable, GUIContent.none);
+            EditorGUI.LabelField(isActiveRect, "Is Active");
             EditorGUI.ObjectField(spriteRect, itemSprite, typeof(Sprite), GUIContent.none);
             EditorGUI.ObjectField(uiIconRect, uiIcon, typeof(Sprite), GUIContent.none);
             EditorGUI.PropertyField(nameRect, nameProp, GUIContent.none);
-            EditorGUI.ObjectField(prefabRect, prefab, typeof(HiddenItemView), GUIContent.none);
+            EditorGUI.ObjectField(prefabRect, prefab, typeof(GameObject), GUIContent.none);
             
             y += Mathf.Max(SpriteWidth, UiIconWidth);
             var positionLabelRect = new Rect(position.x, y, 60, LineHeight);
@@ -70,3 +74,4 @@ namespace Data.Editor
         }
     }
 }
+#endif

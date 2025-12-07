@@ -1,0 +1,17 @@
+{
+    "name": "Data.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:656c7d1100f501a458ea74d2328a9762",
+        "GUID:343deaaf83e0cee4ca978e7df0b80d21"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

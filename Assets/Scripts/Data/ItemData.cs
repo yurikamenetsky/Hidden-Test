@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using Views;
 
 namespace Data
 {
@@ -11,7 +10,7 @@ namespace Data
         public Sprite itemSprite;
         public Sprite uiIcon;
         public Vector3 position;
-        public HiddenItemView prefab;
+        public GameObject prefab;
         public bool isEnable = true;
     }
 }
