@@ -21,7 +21,8 @@ namespace Data
         [Header("Timer Settings")]
         [field: SerializeField] public bool TimerEnabled { get; private set; } = true;
         [field: SerializeField] public float TimerDuration { get; private set; } = 120f;
-
+        
+        
         public List<ItemData> GetActiveItems() => items.FindAll(x => x.isEnable);
     }
 }

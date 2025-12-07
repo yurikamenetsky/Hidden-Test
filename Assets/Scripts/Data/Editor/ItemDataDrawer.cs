@@ -18,7 +18,7 @@ namespace Data.Editor
 
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
         {
-            return Mathf.Max(SpriteWidth, UiIconWidth) * 2;
+            return Mathf.Max(SpriteWidth, UiIconWidth) + 15;
         }
 
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)

@@ -20,6 +20,8 @@ namespace Data.Editor
 
         public override void OnInspectorGUI()
         {
+            LevelData levelData = (LevelData)target;
+            
             serializedObject.Update();
             
             DrawPropertiesExcluding(serializedObject, "items", "backgroundSprite");
@@ -49,6 +51,27 @@ namespace Data.Editor
                     
                     // Draw each item in one line
                     EditorGUILayout.PropertyField(item, new GUIContent($"Item {i}"), false);
+                    
+                    // Item sorting
+                    if (i > 0 && GUILayout.Button("↑", GUILayout.Width(25)))
+                    {
+                        var it0 = levelData.items[i - 1];
+                        var tmp = it0;
+                        var it1 = levelData.items[i];
+                        levelData.items[i - 1] = it1;
+                        levelData.items[i] = tmp;
+                    }
+                
+                    if (i < levelData.items.Count - 1 && GUILayout.Button("↓", GUILayout.Width(25)))
+                    {
+                        var it0 = levelData.items[i];
+                        var it1 = levelData.items[i + 1];
+                        var tmp = it1;
+                        levelData.items[i + 1] = it0;
+                        levelData.items[i] = tmp;
+                    }
+                    
+                    EditorGUILayout.Space(30);
                 }
             }
         
@@ -67,7 +90,13 @@ namespace Data.Editor
             }
         
             EditorGUILayout.EndHorizontal();
-        
+
+            // Сохранение изменений
+            if (GUI.changed)
+            {
+                EditorUtility.SetDirty(levelData);
+            }
+            
             serializedObject.ApplyModifiedProperties();
         }
     }
