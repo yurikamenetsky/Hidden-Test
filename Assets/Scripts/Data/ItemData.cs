@@ -4,7 +4,6 @@ using Views;
 
 namespace Data
 {
-    //[CreateAssetMenu(fileName = "New Item", menuName = "Hidden Object/Item Data")]
     [Serializable]
     public class ItemData
     {
@@ -13,5 +12,6 @@ namespace Data
         public Sprite uiIcon;
         public Vector3 position;
         public HiddenItemView prefab;
+        public bool isEnable = true;
     }
 }

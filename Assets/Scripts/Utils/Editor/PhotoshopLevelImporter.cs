@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Data;
-using Unity.VisualScripting;
 using UnityEditor;
-using UnityEditor.U2D;
-using UnityEditor.U2D.PSD;
 using UnityEngine;
 using UnityEngine.U2D;
 using Views;
@@ -68,6 +65,8 @@ namespace Utils.Editor
             var levelData = CreateInstance<LevelData>();
             levelData.levelId = _levelId;
             levelData.items = new List<ItemData>();
+
+            GameObject backgroundGo = null;
             
             // 3. Items analysis
             Object[] allAssets = AssetDatabase.LoadAllAssetsAtPath(filePath);
@@ -87,6 +86,7 @@ namespace Utils.Editor
                         Debug.LogWarning($"Multiple background sprite for level: {_levelId}");
                     }
                     levelData.backgroundSprite = sprite.sprite;
+                    backgroundGo = go;
                     continue;
                 }
 
@@ -115,16 +115,31 @@ namespace Utils.Editor
                 }
             }
 
+            if (!backgroundGo)
+            {
+                EditorUtility.DisplayDialog("Level import error", "Background not found", "OK");
+                return;
+            }
+
             var toDelete = new List<ItemData>();
             // 4. Prefabs creation
             foreach (var item in levelData.items)
             {
-                if (!item.itemSprite || !item.uiIcon)
+                if (!item.itemSprite)
                 {
-                    Debug.LogWarning($"Item not consistent: {item.name}");
+                    Debug.LogWarning($"Item has no main sprite: {item.name}");
                     toDelete.Add(item);
                     continue;
                 }
+                
+                if (!item.uiIcon)
+                {
+                    Debug.LogWarning($"Item has no UI sprite: {item.name}");
+                    toDelete.Add(item);
+                    continue;
+                }
+
+                item.position -= backgroundGo.transform.position;
                 item.prefab = CreateObjectPrefab(item.itemSprite, levelPath);
             }
 
@@ -140,7 +155,8 @@ namespace Utils.Editor
         {
             var go = new GameObject(sprite.name);
             go.AddComponent<SpriteRenderer>().sprite = sprite;
-            go.AddComponent<PolygonCollider2D>();
+            var pc = go.AddComponent<PolygonCollider2D>();
+            pc.isTrigger = true;
             go.AddComponent<HiddenItemView>();
 
             // Prefab creation

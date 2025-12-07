@@ -6,37 +6,22 @@ namespace Data
     [CreateAssetMenu(fileName = "New Level", menuName = "Hidden Object/Level Data")]
     public class LevelData : ScriptableObject
     {
-        [Header("Base Settings")]
+        [Header("Base Settings")] 
         public string levelId;
         public Sprite backgroundSprite;
 
         [Header("Items Settings")]
         public List<ItemData> items;
-        public List<bool> itemsEnabled;
-    
+
+        [field: SerializeField] public int MaxItemsCount { get; private set; } = 3;
+
         [Header("UI Settings")]
-        public bool useImagesInsteadOfText = false;
+        [field: SerializeField] public bool UseImagesInsteadOfText { get; private set; } = true;
     
         [Header("Timer Settings")]
-        public bool timerEnabled = true;
-        public float timerDuration = 120f;
-    
-        [Header("Items Order")]
-        public List<int> itemOrder;
-    
-        public List<ItemData> GetActiveItemsInOrder()
-        {
-            List<ItemData> result = new List<ItemData>();
-        
-            foreach (int index in itemOrder)
-            {
-                if (index < items.Count && index < itemsEnabled.Count && itemsEnabled[index])
-                {
-                    result.Add(items[index]);
-                }
-            }
-        
-            return result;
-        }
+        [field: SerializeField] public bool TimerEnabled { get; private set; } = true;
+        [field: SerializeField] public float TimerDuration { get; private set; } = 120f;
+
+        public List<ItemData> GetActiveItems() => items.FindAll(x => x.isEnable);
     }
 }
